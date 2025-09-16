@@ -95,6 +95,16 @@ function AboutSection() {
           </div>
         </div>
       </div>
+      {/*          
+
+         
+
+          <p>
+            I'm a passionate Software Engineer . My portfolio showcases a range
+            of projects that highlight my problem-solving skills, attention to
+            detail, and commitment to delivering high-quality solutions.
+          </p>
+         */}
     </section>
   );
 }
