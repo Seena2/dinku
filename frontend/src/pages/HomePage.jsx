@@ -22,12 +22,13 @@ function HomePage() {
       <main className="main-content ">
         <div className="sections">
           <HeroSection />
-
           <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
         </div>
 
-        {/* <SkillsSection />
-        <ProjectsSection />
+        {/* 
+        
         <ContactSection /> */}
       </main>
       {/* Footer  */}
