@@ -13,6 +13,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-to-github-pages.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -41,7 +44,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: "ghp-build-artifact"
-
           publish_dir: ./dist
           # Set the base URL if your project is not at the root of the domain
           # This should match the "homepage" field in package.json and "base" in vite.config.js
