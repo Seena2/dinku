@@ -1,0 +1,50 @@
+name: Build and Deploy to GH Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Upload build Output/Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: "ghp-build-artifact"
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: "ghp-build-artifact"
+
+          publish_dir: ./dist
+          # Set the base URL if your project is not at the root of the domain
+          # This should match the "homepage" field in package.json and "base" in vite.config.js
+          # For example, if your project is at https://username.github.io/repo-name/, set base_url to /repo-name/
+          # If your project is at https://username.github.io/, set base_url to /
+          # base_url: /dinku/  # Uncomment and set this if needed
