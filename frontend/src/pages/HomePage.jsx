@@ -25,11 +25,8 @@ function HomePage() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <ContactSection />
         </div>
-
-        {/* 
-        
-        <ContactSection /> */}
       </main>
       {/* Footer  */}
       <Footer />

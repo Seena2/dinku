@@ -3,9 +3,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="Py-12 px-4 bg-card relative border-t border-border text-center mt-12 pt-8 flex flex-wrap justify-between items-center">
+    <footer className=" footer Py-12 px-4 bg-card relative border-t border-border text-center mt-12 pt-8 flex flex-wrap justify-between items-center">
       <p className="text-sm text-muted-foreground">
-        &copy;{new Date().getFullYear()} Seena.co, All rights reserved
+        &copy;2020-{new Date().getFullYear()} Seena.co, All rights reserved
       </p>
       <a
         href="#hero"

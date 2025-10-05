@@ -10,34 +10,41 @@ import {
 
 function HeroSection() {
   return (
-    <section id="hero" className="hero-section">
-      <div className="container-fw container-white">
-        <div className="content">
+    <section id="hero" className="hero-section background-white">
+      <div className="section-container">
+        <div className="hero">
           <div className="palistine">
-            <div className="col1">
-              <div className="box box1"></div>
-              <div className="box box2">
-                <Youtube />
-              </div>
-              <div className="box box1"></div>
+            <div className="pal-group">
               <div className="box box2">
                 <Linkedin />
               </div>
-              <div className="box box1"> </div>
+              <div className="box box1"></div>
+            </div>
+            <div className="pal-group">
+              <div className="box box1"></div>
               <div className="box box2">
                 <Github />
               </div>
             </div>
-            <div className="col2">
-              <div className="box box1"></div>
+            <div className="pal-group">
               <div className="box box2">
-                {" "}
                 <Twitter />
               </div>
+              <div className="box box1"></div>
+            </div>
+            <div className="pal-group">
               <div className="box box1"></div>
               <div className="box box2">
                 <Facebook />
               </div>
+            </div>
+            <div className="pal-group">
+              <div className="box box2">
+                <Youtube />
+              </div>
+              <div className="box box1"></div>
+            </div>
+            <div className="pal-group">
               <div className="box box1"></div>
               <div className="box box2"></div>
             </div>
@@ -46,7 +53,9 @@ function HeroSection() {
           <div className="desktop-shape">
             <div className="desktop-content">
               <div className="hero-overview">
-                <h3>Dinku Hamda</h3>
+                <h3>
+                  Dinku <span>Hamda</span>
+                </h3>
                 <p>
                   A Software Engineer specialized in full-stack development with
                   a knack for building exceptional software products with modern
