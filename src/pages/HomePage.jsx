@@ -5,6 +5,7 @@ import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import BlogsSection from "../components/BlogsSection";
 // import ThemeToggle from "../components/ThemeToggle";
 // import StarBackground from "../components/StarBackground";
 
@@ -25,6 +26,7 @@ function HomePage() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <BlogsSection />
           <ContactSection />
         </div>
       </main>
