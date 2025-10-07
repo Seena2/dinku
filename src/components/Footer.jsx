@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import React from "react";
 
 function Footer() {
@@ -7,6 +7,12 @@ function Footer() {
       <p className="text-sm text-muted-foreground">
         &copy;2020-{new Date().getFullYear()} Seena.co, All rights reserved
       </p>
+      <div className="footer-social-links">
+        <Github />
+        <Facebook />
+        <Twitter />
+        <Linkedin />
+      </div>
       <a
         href="#hero"
         className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors text-primary"

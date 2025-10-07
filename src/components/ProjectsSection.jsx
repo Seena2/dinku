@@ -1,4 +1,6 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import ProjectsPage from "../pages/ProjectsPage";
+import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
@@ -78,14 +80,10 @@ function ProjectsSection() {
           ))}
         </div>
         <div className="more-projects ">
-          <a
-            href="https://github.com/Seena2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Check my GitHub/View more projects
+          <Link to="/projects" target="_blank" rel="noopener noreferrer">
+            View more projects
             <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 const blogs = [
   {
     id: 1,
@@ -70,14 +71,10 @@ function BlogsSection() {
           ))}
         </div>
         <div className="more-projects ">
-          <a
-            href="https://github.com/Seena2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Check my GitHub/View more projects
+          <Link to="/blogs" target="_blank" rel="noopener noreferrer">
+            more Blogs
             <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
